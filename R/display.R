@@ -16,7 +16,7 @@ display <- function(coregnetwork,expressionData=NULL,TFA = NULL,alterationData=N
     TFA= regulatorInfluence(coregnetwork,expressionData)  
   }
   
-  x=coregulators(coregnetwork,alpha = 10^-2)[1:4]
+  x=coregulators(coregnetwork,alpha = 10^-2)[c(1:3,5)]
   if(is.null(nrow(x) )| nrow(x) ==0){
       stop("No co-regulators in the provided network. If it was inferred with the hLICORN function, try a lower minCoregSupport.")
   }
