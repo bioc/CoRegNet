@@ -9,8 +9,9 @@ Install
 
 From R :
 ```
-source("http://bioconductor.org/biocLite.R")
-biocLite("CoRegNet")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("CoRegNet")
 ```
 
 Quick user guide
